@@ -9,7 +9,10 @@ function App() {
 
   useEffect(() => {
     d3.csv('/tips.csv').then(data => {
+      console.log("Loaded data:", data); // Check if data is loaded
       setData(data);
+    }).catch(error => {
+      console.error("Error loading data:", error); // Check for errors
     });
   }, []);
 

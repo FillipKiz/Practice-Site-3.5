@@ -6,6 +6,7 @@ const Child2 = ({ data }) => {
 
   useEffect(() => {
     if (data.length > 0) {
+        console.log("Child2 data:", data); // Verify data is passed correctly
       const margin = { top: 20, right: 30, bottom: 40, left: 40 };
       const width = 500 - margin.left - margin.right;
       const height = 400 - margin.top - margin.bottom;
